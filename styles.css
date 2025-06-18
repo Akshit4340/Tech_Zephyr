@@ -47,6 +47,7 @@ body {
   top: 0;
   z-index: 1000;
   padding: 1rem;
+  transition: all 0.5s ease-in-out;
 }
 
 .logo a {
@@ -63,13 +64,13 @@ body {
 }
 
 .nav-links a {
-  color: white;
+  /* color: white; */
   text-decoration: none;
   font-size: 1rem;
 }
 
 .nav-links a:hover {
-  color: gold;
+  color: var(--primary-color);
 }
 
 .hamburger {
@@ -92,7 +93,9 @@ body {
     position: absolute;
     top: 70px;
     right: 0;
-    background-color: #11182780;
+    background-color: #111827d4;
+    backdrop-filter: blur(10px);
+    /* border-bottom: 2px solid #4a6292b7; */
     flex-direction: column;
     width: 100%;
     text-align: center;
@@ -107,6 +110,10 @@ body {
 
   .hamburger {
     display: flex;
+  }
+
+  .register-btn {
+    display: none;
   }
 }
 .mainbox {
@@ -127,7 +134,7 @@ body {
   padding: 1.5rem;
 }
 h3 {
-  color: gold;
+  color: var(--primary-color);
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -137,9 +144,10 @@ h3 {
   text-align: center;
   align-items: center;
   justify-content: center;
+  margin: 1rem 0;
 }
 .cardheading {
-  color: gold;
+  color: var(--primary-color);
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -185,6 +193,7 @@ h3 {
   gap: 1.5rem;
   display: grid;
   grid-template-columns: 1fr;
+  z-index: 10;
 }
 .grid2 {
   border-color: #e5e7eb;
@@ -196,7 +205,7 @@ h3 {
   color: rgb(209 213 219 / var(--tw-text-opacity, 1));
 }
 .griditem1 {
-  color: gold;
+  color: var(--primary-color);
   font-weight: 700;
   font-size: 2.25rem;
   line-height: 2.5rem;
@@ -206,6 +215,7 @@ h3 {
   display: grid;
   grid-template-columns: 1fr;
   padding: 2rem;
+  z-index: 10;
 }
 .grid5 p {
   color: rgb(209 213 219 / var(--tw-text-opacity, 1));
@@ -229,7 +239,7 @@ h3 {
 h1 {
   margin-top: 70px;
   border-top: 10px;
-  color: gold;
+  color: var(--primary-color);
   font-size: 3.75rem;
   line-height: 1;
   align-self: center;
@@ -250,13 +260,13 @@ span {
   align-self: center;
   text-align: center;
   justify-content: center;
-  color: gold;
+  color: var(--primary-color);
 }
 .anime {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: gold;
+  color: var(--primary-color);
   font-family: "Courier New", monospace;
   font-size: 2.5rem;
   overflow: hidden;
@@ -264,11 +274,11 @@ span {
 .typed-text {
   display: inline-block;
   white-space: nowrap;
-  border-right: 2px solid gold;
+  border-right: 2px solid var(--primary-color);
   width: 0;
   overflow: hidden;
   animation: typing 3s steps(22, end) infinite, blink 2s step-end infinite;
-  color: gold;
+  color: var(--primary-color);
 }
 @keyframes typing {
   0% {
@@ -420,6 +430,7 @@ nav ul li a {
 }
 
 .hero-buttons {
+  display: flex;
   justify-content: center;
 }
 
@@ -588,14 +599,14 @@ button {
 
 .event-cards {
   margin: 2rem 10vw;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  align-items: center;
   gap: 2rem;
 }
 
 @media (max-width: 1170px) {
   .event-cards {
-    grid-template-columns: 1fr 1fr;
+    flex-direction: column;
   }
 }
 
@@ -642,16 +653,22 @@ button {
 .content > .date {
   /* color: #67e8f9; */
   color: rgb(190, 190, 190);
+  margin: 1rem 0;
+}
+.content h2 {
+  margin: 0.5rem 0;
 }
 
 .content > .description {
   color: #aaacb0;
+  margin: 1rem 0;
 }
 
 .content > .points {
   display: flex;
   color: #9ba2ae;
   justify-content: space-between;
+  margin: 1rem 0;
 }
 
 .functions {
@@ -1039,6 +1056,13 @@ footer .footer .footer-left-ul {
 footer .footer .footer-left-ul > li {
   cursor: pointer;
 }
+footer .footer .footer-left-ul {
+  margin-top: 1em;
+}
+
+.right ul {
+  margin-top: 1em;
+}
 
 .github,
 .twitter,
@@ -1149,7 +1173,8 @@ header .register-btn .btn-primary:hover {
 
 .hero-buttons {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
+  margin-top: 2rem;
   gap: 1rem;
   justify-content: center;
   align-items: center;
@@ -1164,6 +1189,7 @@ header .register-btn .btn-primary:hover {
   cursor: pointer;
   transition: var(--transition);
   border: none;
+  border-radius: 20px;
   font-size: 1rem;
 }
 
@@ -1188,8 +1214,19 @@ header .register-btn .btn-primary:hover {
 
 .hero-content {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 2rem auto;
   text-align: center;
   position: relative;
   z-index: 2;
+}
+
+.navbar-scroll {
+  background-color: #070b13b7;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0, 15);
+  border-bottom: 2px solid #4a6292b7;
+}
+
+.not-active {
+  color: white;
 }

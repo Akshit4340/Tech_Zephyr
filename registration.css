@@ -4,9 +4,16 @@
   box-sizing: border-box;
 }
 
+:root {
+  --dark-blue: #0f172a;
+  --primary-color: #ffd700;
+  --primary-dark: #e6c200;
+  --primary-light: #ffe066;
+}
+
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #1a2332 0%, #2d3748 100%);
+  background: var(--dark-blue);
   color: #ffffff;
   min-height: 100vh;
   line-height: 1.6;
@@ -52,7 +59,7 @@ body {
 
 .nav-link:hover,
 .nav-link.active {
-  color: #fbbf24;
+  color: var(--primary-color);
 }
 
 /* Hamburger Menu */
@@ -119,7 +126,7 @@ body {
 }
 
 .form-container {
-  background: rgba(45, 55, 72, 0.95);
+  background: rgb(27 37 57);
   backdrop-filter: blur(10px);
   border-radius: 16px;
   padding: 3rem;
@@ -283,12 +290,12 @@ body {
 }
 
 .submit-btn {
-  background: #fbbf24;
+  background: var(--primary-color);
   color: #1a2332;
 }
 
 .submit-btn:hover {
-  background: #f59e0b;
+  background: var(--primary-dark);
   transform: translateY(-2px);
 }
 

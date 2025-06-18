@@ -1,5 +1,7 @@
 const hamburger = document.getElementById("hamburger");
 const mobileMenu = document.getElementById("mobileMenu");
+const scriptURL =
+  "https://script.google.com/macros/s/AKfycbx3okC4eK3Zw3G_RDrylv45c-q__a_7kugsRc0enYqzG6sRvOVJUiX7_flkiXF40QuF/exec";
 
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
