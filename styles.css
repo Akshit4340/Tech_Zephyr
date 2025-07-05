@@ -107,13 +107,16 @@ body {
     flex-direction: column;
     width: 100%;
     text-align: center;
-    max-height: 0;
+    /* max-height: 0; */
+    display: none;
     overflow: hidden;
-    transition: max-height 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
   }
 
   .nav-links.open {
     max-height: 500px;
+    display: flex;
+    flex-direction: column;
   }
 
   .hamburger {
