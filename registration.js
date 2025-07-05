@@ -1,12 +1,10 @@
-const hamburger = document.getElementById("hamburger");
+// const hamburger = document.getElementById("hamburger");
 const mobileMenu = document.getElementById("mobileMenu");
-const scriptURL =
-  "https://script.google.com/macros/s/AKfycbx3okC4eK3Zw3G_RDrylv45c-q__a_7kugsRc0enYqzG6sRvOVJUiX7_flkiXF40QuF/exec";
 
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  mobileMenu.classList.toggle("active");
-});
+// hamburger.addEventListener("click", () => {
+//   hamburger.classList.toggle("active");
+//   mobileMenu.classList.toggle("active");
+// });
 
 // Close mobile menu when clicking on a link
 document.querySelectorAll(".nav-menu.mobile .nav-link").forEach((link) => {
